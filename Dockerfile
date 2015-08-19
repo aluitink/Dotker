@@ -15,11 +15,9 @@ RUN rm -rf /etc/nginx/conf.d/*
 
 ADD nginx.conf /etc/nginx/nginx.conf
 
-VOLUME ["/etc/nginx"]
-
 EXPOSE 4242
 
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
 
 #Dotker app setup
 
