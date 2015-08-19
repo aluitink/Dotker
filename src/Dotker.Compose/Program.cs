@@ -20,6 +20,8 @@ namespace Dotker.Compose
 
         public void Main(string[] args)
         {
+            AnonymousCredentials creds = new AnonymousCredentials();
+
             DockerClient client = new DockerClientConfiguration(new Uri("http://127.0.0.1:4242")).CreateClient();
 
             var containers = client.Containers.ListContainersAsync(new Docker.DotNet.Models.ListContainersParameters() { All = true }).Result;
