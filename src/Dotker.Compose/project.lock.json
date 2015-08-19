@@ -3,7 +3,7 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6-12085": {
+      "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6": {
         "frameworkAssemblies": [
           "Microsoft.CSharp",
           "mscorlib",
@@ -20,23 +20,23 @@
     }
   },
   "libraries": {
-    "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6-12085": {
+    "Microsoft.Framework.Runtime.Abstractions/1.0.0-beta6": {
       "serviceable": true,
-      "sha512": "Epv7lYbHX6kHCQqAcOQGD5zmKbk0xFFhrdOSG4h2U2BukPzKchzRBSxehjrj3qLlcnoBVpq0BLk1oGXicqil7Q==",
+      "sha512": "w4Cwg6jgPd3XFGOgBGU3GVGVAwUcMglSDTlI23M8uI7yhDRSDbxZ2HPbjTEBMoj+IYdkfunZWFdA67tdk8L8Tg==",
       "files": [
         "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.dll",
         "lib/dnx451/Microsoft.Framework.Runtime.Abstractions.xml",
         "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.dll",
         "lib/dnxcore50/Microsoft.Framework.Runtime.Abstractions.xml",
-        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6-12085.nupkg",
-        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6-12085.nupkg.sha512",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6.nupkg",
+        "Microsoft.Framework.Runtime.Abstractions.1.0.0-beta6.nupkg.sha512",
         "Microsoft.Framework.Runtime.Abstractions.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.Framework.Runtime.Abstractions >= 1.0.0-beta6-12085"
+      "Microsoft.Framework.Runtime.Abstractions >= 1.0.0-beta6"
     ],
     "DNX,Version=v4.5.1": []
   }
