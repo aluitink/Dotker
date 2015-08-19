@@ -12,6 +12,13 @@ namespace Dotker.Compose
             Console.WriteLine("HelloWorld");
 
             Console.WriteLine("Args is null: {0}", args == null);
+
+            Console.WriteLine("args.length: {0}", args.Length);
+
+            foreach (var item in args)
+            {
+                Console.WriteLine("Arg: {0}", item);
+            }
         }
     }
 }
