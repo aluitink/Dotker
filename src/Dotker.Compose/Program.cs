@@ -38,7 +38,7 @@ namespace Dotker.Compose
 
         }
 
-        public void PrintEnvironmentInformation()
+        public void PrintEnvironmentInformation(string[] args)
         {
             Console.WriteLine("AppEnv");
             Console.WriteLine("\tApplicationName: {0}", _appEnv.ApplicationName);
