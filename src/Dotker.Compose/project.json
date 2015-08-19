@@ -1,20 +1,21 @@
 {
-    "version": "1.0.0-*",
-    "description": "Dotker.Compose Console Application",
-    "authors": [ "Administrator" ],
-    "tags": [ "" ],
-    "projectUrl": "",
-    "licenseUrl": "",
+  "version": "1.0.0-*",
+  "description": "Dotker.Compose Console Application",
+  "authors": [ "Administrator" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
 
-    "dependencies": {
-        "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6"
-    },
+  "dependencies": {
+    "Microsoft.Framework.Runtime.Abstractions": "1.0.0-beta6",
+    "Docker.DotNet": "1.1.1"
+  },
 
-    "commands": {
-        "Dotker.Compose": "Dotker.Compose"
-    },
+  "commands": {
+    "Dotker.Compose": "Dotker.Compose"
+  },
 
-    "frameworks": {
-        "dnx451": { }
-    }
+  "frameworks": {
+    "dnx451": { }
+  }
 }

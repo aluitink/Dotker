@@ -1,4 +1,5 @@
-﻿using Microsoft.Framework.Runtime;
+﻿using Docker.DotNet;
+using Microsoft.Framework.Runtime;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,6 +19,26 @@ namespace Dotker.Compose
         }
 
         public void Main(string[] args)
+        {
+            DockerClient client = new DockerClientConfiguration(new Uri("http://127.0.0.1:4242")).CreateClient();
+
+            var containers = client.Containers.ListContainersAsync(new Docker.DotNet.Models.ListContainersParameters() { All = true }).Result;
+
+            foreach (var item in containers)
+            {
+                Console.WriteLine("Id: {0}", item.Id);
+                Console.WriteLine("Names: {0}", string.Join(", ", item.Names));
+                Console.WriteLine("Command: {0}", item.Command);
+                Console.WriteLine("Created: {0}", item.Created);
+                Console.WriteLine("Image: {0}", item.Image);
+                Console.WriteLine("SizeRootFs: {0}", item.SizeRootFs);
+                Console.WriteLine("SizeRw: {0}", item.SizeRw);
+                Console.WriteLine("Status: {0}", item.Status);
+            }
+
+        }
+
+        public void PrintEnvironmentInformation()
         {
             Console.WriteLine("AppEnv");
             Console.WriteLine("\tApplicationName: {0}", _appEnv.ApplicationName);
@@ -57,7 +78,6 @@ namespace Dotker.Compose
             {
                 Console.WriteLine("\t\t{0}", item.FullName);
             }
-
         }
     }
 }
