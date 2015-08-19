@@ -18,8 +18,8 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 #Dotker app setup
 
-COPY ./src/Dotker.Compose /app
-WORKDIR /app
+COPY . /app
+WORKDIR /app/src/Dotker.Compose
 RUN ["dnu", "restore"]
 
 #ENTRYPOINT ["dnx", ".", "run"]
