@@ -9,6 +9,7 @@ namespace Dotker.Compose
     {
         public void Main(string[] args)
         {
+            Console.WriteLine("HelloWorld");
         }
     }
 }
