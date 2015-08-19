@@ -5,18 +5,16 @@ RUN echo "deb http://nginx.org/packages/debian/ wheezy nginx" >> /etc/apt/source
 RUN apt-key adv --fetch-keys "http://nginx.org/keys/nginx_signing.key"
 
 RUN apt-get update && apt-get -y dist-upgrade
-RUN apt-get -y install nginx openssl ca-certificates
+RUN apt-get -y install nginx openssl ca-certificates supervisor
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 RUN rm -rf /etc/nginx/conf.d/*
-
-RUN chown root:nginx /var/run/docker.sock
+RUN usermod -a -G users nginx
 
 ADD nginx.conf /etc/nginx/nginx.conf
-
-CMD ["nginx"]
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 #Dotker app setup
 
@@ -25,4 +23,4 @@ WORKDIR /app
 RUN ["dnu", "restore"]
 
 #ENTRYPOINT ["dnx", ".", "run"]
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/usr/bin/supervisord"]
